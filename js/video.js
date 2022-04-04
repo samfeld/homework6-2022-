@@ -60,8 +60,8 @@ document.querySelector("#slider").addEventListener("click", function(){
 });
 
 document.querySelector("#vintage").addEventListener("click", function(){
-	document.querySelector(".video").style.oldSchool.disabled=false;
-
+	// document.querySelector(".video").style.oldSchool.disabled=false;
+	document.querySelector(".video").css(".oldSchool");
 });
 document.querySelector("#orig").addEventListener("click", function(){
 	document.querySelector(".video").style.oldSchool.disabled=true;
