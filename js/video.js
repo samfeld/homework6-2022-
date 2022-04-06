@@ -60,17 +60,8 @@ document.querySelector("#slider").addEventListener("click", function(){
 });
 
 document.querySelector("#vintage").addEventListener("click", function(){
-	// document.querySelector(".video").style.oldSchool.disabled=false;
-	// document.querySelector(".video").css(".oldSchool");
-	document.querySelector(".video").style.filter="grayscale(100%)";
-	document.querySelector(".video").style.width="75%";
-	document.querySelector(".video").style.border="5px double grey";
-	document.querySelector(".video").style.borderRadius="20px";
+	document.querySelector(".video").classList.add("oldSchool");
 });
 document.querySelector("#orig").addEventListener("click", function(){
-	// document.querySelector(".video").style.oldSchool.disabled=true;
-	document.querySelector(".video").style.filter="none";
-	document.querySelector(".video").style.width="90%";
-	document.querySelector(".video").style.border="2px solid black";
-	document.querySelector(".video").style.borderRadius="0px";
+	document.querySelector(".video").classList.remove("oldSchool");
 });
