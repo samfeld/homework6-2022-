@@ -34,7 +34,7 @@ document.querySelector("#faster").addEventListener("click", function(){
 document.querySelector("#skip").addEventListener("click", function(){
 	console.log("The length of this video is: "+ video.duration)
 	console.log("The current location of the video is: " + video.currentTime);
-	if(video.currentTime<67.403){
+	if(video.currentTime+15<=video.duration){
 		video.currentTime+=15;
 	}
 	else{
@@ -48,10 +48,11 @@ document.querySelector("#mute").addEventListener("click", function(){
 	console.log("The value of mute is " +video.muted)
 	if(video.muted==true){
 		video.muted=false;
+		document.querySelector("#mute").innerHTML="Mute";
 	}
 	else{
 		video.muted=true;
-		document.querySelector("#mute").innerHTML="unmute";
+		document.querySelector("#mute").innerHTML="Unmute";
 	}
 	document.querySelector("#volume").innerHTML=video.volume *100 + "%";
 });
