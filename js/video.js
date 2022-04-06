@@ -11,6 +11,7 @@ window.addEventListener("load", function() {
  document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	// add this here instead? document.querySelector("#volume").innerHTML=video.volume *100 + "%";
  });
 
  document.querySelector("#pause").addEventListener("click", function() {
@@ -33,7 +34,7 @@ document.querySelector("#faster").addEventListener("click", function(){
 document.querySelector("#skip").addEventListener("click", function(){
 	console.log("The length of this video is: "+ video.duration)
 	console.log("The current location of the video is: " + video.currentTime);
-	if(video.currentTime<67){
+	if(video.currentTime<67.403){
 		video.currentTime+=15;
 	}
 	else{
@@ -50,7 +51,7 @@ document.querySelector("#mute").addEventListener("click", function(){
 	}
 	else{
 		video.muted=true;
-		document.querySelector("#mute").innerHTML="Unmute";
+		document.querySelector("#mute").innerHTML="unmute";
 	}
 	document.querySelector("#volume").innerHTML=video.volume *100 + "%";
 });
